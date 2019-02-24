@@ -44,6 +44,6 @@ cp .env.example .env
 
    
 
-6. Open a browser to http://localhost:8000/graphql?query=query{wines}
+6. Open a browser to http://localhost:8000/graphql-ui
 
    

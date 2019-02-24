@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "75492fff724001925384b869cf8a574b",
+    "content-hash": "5a29ddb8f56e584c0482aac44813e7dc",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -2741,6 +2741,55 @@
                 "object graph"
             ],
             "time": "2017-10-19T19:58:43+00:00"
+        },
+        {
+            "name": "noh4ck/graphiql",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Nohac/laravel-graphiql.git",
+                "reference": "befdb5a84a2cad5989cc715f274ac971f582d1a6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Nohac/laravel-graphiql/zipball/befdb5a84a2cad5989cc715f274ac971f582d1a6",
+                "reference": "befdb5a84a2cad5989cc715f274ac971f582d1a6",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*|5.6.*|5.7.*",
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Graphiql\\GraphiqlServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Graphiql\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonas Rudlang",
+                    "email": "jonas.rudlang@gmail.com"
+                }
+            ],
+            "description": "Graphiql UI for laravel",
+            "keywords": [
+                "graphiql",
+                "graphql",
+                "laravel"
+            ],
+            "time": "2018-09-12T15:45:52+00:00"
         },
         {
             "name": "phar-io/manifest",

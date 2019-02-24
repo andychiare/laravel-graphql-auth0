@@ -17,11 +17,6 @@ class WinesQuery extends Query {
         return Type::listOf(GraphQL::type('Wine'));
     }
 
-    public function args()
-    {
-        return [];
-    }
-
     public function resolve($root, $args)
     {
       return Wine::all();
