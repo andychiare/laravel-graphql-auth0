@@ -20,7 +20,7 @@ After cloning this repository, move in the cloned directory and follows these st
 cp .env.example .env
 ```
 
-2. Edit the `.env` file in order to configure the parameters to access your database.
+2. Edit the `.env` file in order to configure the parameters to access your database (`DB_*`) and to configure Auth0 integration (`AUTH0_*`).
 
 3. Install the project's dependencies by running Composer, as shown below:
 
