@@ -1,3 +1,4 @@
+<?php
 namespace App\GraphQL\Queries;
 
 use GraphQL;
