@@ -24,6 +24,8 @@ class WineQuery extends Query {
     			'authorized_iss' => [env( 'AUTH0_DOMAIN' )],
             	'client_secret' => [env( 'AUTH0_CLIENT_SECRET' )]
 			]);
+        	$request = request();
+        	$token = $request->bearerToken();
 
 			$decoded = $verifier->verifyAndDecode($token);
         	$isAuthorized = (boolean) $decoded;
