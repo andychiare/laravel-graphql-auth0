@@ -27,5 +27,6 @@ return [
     'headers' => [
         'Accept' => 'application/json',
         'Content-Type' => 'application/json',
+    	'Authorization' => 'Bearer '.env(AUTH0_ACCESS_TOKEN) 
     ],
 ];

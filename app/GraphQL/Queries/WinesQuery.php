@@ -16,13 +16,20 @@ class WinesQuery extends Query {
 
 	public function authorize(array $args)
     {
-		$verifier = new JWTVerifier([
-    		'valid_audiences' => [env( 'AUTH0_AUDIENCE' )],
-    		'authorized_iss' => [env( 'AUTH0_DOMAIN' )]
-		]);
+    	$isAuthorized = true;
+    
+    	if (!empty(env( 'AUTH0_AUDIENCE' )) && !empty(env( 'AUTH0_DOMAIN' ))) {
+			$verifier = new JWTVerifier([
+    			'valid_audiences' => [env( 'AUTH0_AUDIENCE' )],
+    			'authorized_iss' => [env( 'AUTH0_DOMAIN' )],
+            	'client_secret' => [env( 'AUTH0_CLIENT_SECRET' )]
+			]);
 
-		$decoded = $verifier->verifyAndDecode($token);
-    	return (boolean) $decoded;
+			$decoded = $verifier->verifyAndDecode($token);
+        	$isAuthorized = (boolean) $decoded;
+        }
+    
+    	return $isAuthorized;
     }
 
     public function type()
