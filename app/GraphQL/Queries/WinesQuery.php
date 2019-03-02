@@ -22,10 +22,12 @@ class WinesQuery extends Query {
 			$verifier = new JWTVerifier([
     			'valid_audiences' => [env( 'AUTH0_AUDIENCE' )],
     			'authorized_iss' => [env( 'AUTH0_DOMAIN' )],
-            	'client_secret' => [env( 'AUTH0_CLIENT_SECRET' )]
+            	'client_secret' => env( 'AUTH0_CLIENT_SECRET' ),
+            	'supported_algs' => ['RS256']
 			]);
         	$request = request();
-        	$token = $request->bearerToken();
+        	$token = $request-> bearerToken();
+        	$token = ($token) ? $token : $request-> header('token');
 
 			$decoded = $verifier->verifyAndDecode($token);
         	$isAuthorized = (boolean) $decoded;
