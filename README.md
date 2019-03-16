@@ -1,6 +1,6 @@
 # GraphQL API with Laravel and secured with Auth0
 
-A sample GraphQL API built with Laravel and secured with Auth0
+A sample GraphQL API built with Laravel and secured with Auth0. The project is described in the article [Developing and Securing GraphQL APIs with Laravel](https://auth0.com/blog/developing-and-securing-graphql-apis-with-laravel/)
 
 ## Requirements
 
